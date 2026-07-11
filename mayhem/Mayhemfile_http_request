@@ -1,0 +1,9 @@
+project: boost-beast
+target: http_request
+cmds:
+  - cmd: /mayhem/http_request
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/http_request.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/http_request/testsuite

@@ -1,0 +1,42 @@
+PATCH /objectserver/restapi/alerts/status/kf/12510%3ANCOMS HTTP/1.1
+Accept: application/json
+Authorization: Basic dGVzdHVzZXIwMTpuZXRjb29s
+Content-Type: application/json
+Host: localhost
+Connection: keep-alive
+Content-Length: 1092
+{
+	"rowset":	{
+	"coldesc":	[
+			{
+					"type": "integer",
+					"name": "Acknowledged"
+			},
+			{
+					"type": "string",
+					"name": "Location"
+			},
+			{
+					"type": "integer",
+					"name": "OwnerUID"
+			},
+			{
+				"type": "integer",
+				"name": "OwnerGID"
+			},
+			{
+				"type": "utc",
+				"name": "LastOccurrence"
+			}
+		],
+		"rows":	[
+			{
+				"Location": "UPDATED",
+				"LastOccurrence": 1341412235,
+				"Acknowledged": 1,
+				"OwnerUID": 65534,
+				"OwnerGID": 1
+			}
+		]
+	}
+}

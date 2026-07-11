@@ -1,0 +1,9 @@
+project: boost-beast
+target: http_response
+cmds:
+  - cmd: /mayhem/http_response
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/http_response.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/http_response/testsuite

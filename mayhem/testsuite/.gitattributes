@@ -1,0 +1,3 @@
+# Fuzz seed corpora are byte-exact inputs (HTTP messages carry literal CRLF) — never let Git
+# normalize line endings or apply text filters, or the seeds get corrupted.
+* -text -diff

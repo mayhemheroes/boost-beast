@@ -1,0 +1,9 @@
+project: boost-beast
+target: websocket_server
+cmds:
+  - cmd: /mayhem/websocket_server
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/websocket_server.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/websocket_server/testsuite
